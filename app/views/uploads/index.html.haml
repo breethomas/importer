@@ -1,0 +1,9 @@
+%h1 UPLOAD CITY!
+- if flash[:notice]
+  .notice
+    = flash[:notice]
+= form_tag({action: :create}, multipart: true) do 
+  = file_field_tag "spreadsheet", class: "upload"
+  = submit_tag "Upload File", class: "submit"
+
+
